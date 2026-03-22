@@ -1,7 +1,5 @@
 # MovieLens 推荐系统项目
 
-这是一个适合暑期实习简历展示的推荐算法项目公开版仓库。
-
 项目基于 `MovieLens 20M` 数据集实现了完整的推荐系统工作流：
 
 - 单阶段模型：`Popularity / Content / UserCF / ItemCF / SVD`
@@ -12,17 +10,6 @@
 - `FastAPI + 前端展示页`
 - `Notebook` 可视化实验报告
 - `Docker` 部署
-
-项目目标不是只跑一个模型，而是做出一个结构完整、指标清楚、可展示、可服务化、面试时能讲清楚实验和工程设计的推荐系统项目。
-
-## 仓库说明
-
-这个公开仓库默认**不直接提交**以下内容：
-
-- `data/` 原始数据文件
-- `artifacts/` 训练产物和模型文件
-
-这样做是为了让仓库更干净，也避免把大体积数据和本地模型产物直接推到 GitHub。你需要先按 [data/README.md](data/README.md) 准备数据，再执行训练命令生成 `artifacts/`。
 
 ## 当前实验结果
 
@@ -109,7 +96,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-如果你想启用 `ALS / BPR / LightFM`：
+如果启用 `ALS / BPR / LightFM`：
 
 ```bash
 pip install -r requirements-optional.txt
@@ -267,12 +254,8 @@ columns: movieId,director,actors
 ## A/B Test 思路
 
 详细文档见：
-
 - [docs/ab_test.md](docs/ab_test.md)
 
-简历描述和 1 分钟项目介绍见：
-
-- [docs/resume_interview.md](docs/resume_interview.md)
 
 ## Docker 部署
 
@@ -330,11 +313,3 @@ Notebook 位置：
 - `--max-genome-features 1000`
 - `--genome-top-n 8`
 - `--genome-min-relevance 0.6`
-
-## 发布建议
-
-如果你准备把这个仓库公开到 GitHub，建议：
-
-- 保留源码、文档、Notebook、测试和 Docker 配置
-- 不提交 `data/` 和 `artifacts/`
-- 在仓库首页放 2 到 3 张截图，包括推荐页面、指标表和 API/Docker 演示
