@@ -1,0 +1,5 @@
+implicit>=0.7,<0.8
+# On Apple Silicon / macOS, prefer:
+#   conda install -c conda-forge lightfm
+# pip install often fails to build LightFM from source.
+lightfm>=1.17,<1.18

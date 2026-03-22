@@ -1,0 +1,9 @@
+services:
+  recsys-app:
+    platform: linux/amd64
+    build: .
+    container_name: movielens-recsys-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./artifacts:/app/artifacts:ro

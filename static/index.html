@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MovieLens Recsys Studio</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">MovieLens Recommendation Studio</p>
+          <h1>召回、重排、实验指标和推荐接口放在同一个展示页里。</h1>
+          <p class="hero-text">
+            这个页面直接读取 FastAPI 的训练产物，展示模型列表、离线指标、个性化推荐结果，以及两阶段架构的 A/B Test 思路。
+          </p>
+        </div>
+        <div class="hero-badge">
+          <span>Recall</span>
+          <span>Rerank</span>
+          <span>API</span>
+          <span>Dashboard</span>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel metrics-panel">
+          <div class="panel-header">
+            <h2>离线指标</h2>
+            <button id="refresh-metrics" class="ghost-btn">刷新</button>
+          </div>
+          <div id="metrics-table" class="table-wrapper"></div>
+        </section>
+
+        <section class="panel models-panel">
+          <h2>模型状态</h2>
+          <div id="models-list" class="chips"></div>
+        </section>
+
+        <section class="panel recommend-panel">
+          <div class="panel-header">
+            <h2>用户推荐</h2>
+          </div>
+          <form id="recommend-form" class="form-grid">
+            <label>
+              用户 ID
+              <input type="number" id="user-id" value="1" min="1" />
+            </label>
+            <label>
+              模型
+              <select id="recommend-model"></select>
+            </label>
+            <label>
+              Top K
+              <input type="number" id="recommend-topk" value="10" min="1" max="50" />
+            </label>
+            <button type="submit" class="primary-btn">生成推荐</button>
+          </form>
+          <div id="recommend-results" class="cards-grid"></div>
+        </section>
+
+        <section class="panel similar-panel">
+          <div class="panel-header">
+            <h2>相似电影</h2>
+          </div>
+          <form id="similar-form" class="form-grid">
+            <label>
+              电影 ID
+              <input type="number" id="movie-id" value="1" min="1" />
+            </label>
+            <label>
+              模型
+              <select id="similar-model"></select>
+            </label>
+            <label>
+              Top K
+              <input type="number" id="similar-topk" value="8" min="1" max="30" />
+            </label>
+            <button type="submit" class="primary-btn">查找相似电影</button>
+          </form>
+          <div id="similar-results" class="cards-grid"></div>
+        </section>
+
+        <section class="panel ab-panel">
+          <h2>A/B Test 方案</h2>
+          <div id="ab-plan" class="ab-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+  </html>

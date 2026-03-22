@@ -1,0 +1,11 @@
+.venv/
+venv/
+artifacts/
+data/*
+!data/README.md
+__pycache__/
+.pytest_cache/
+.pycache_local/
+*.pyc
+.DS_Store
+notebooks/.ipynb_checkpoints/

@@ -1,0 +1,9 @@
+pandas>=2.2,<2.3
+numpy>=1.26,<2.0
+scipy>=1.14,<1.15
+scikit-learn>=1.5,<1.6
+fastapi>=0.110,<0.111
+uvicorn>=0.29,<0.30
+matplotlib>=3.8,<3.10
+seaborn>=0.13,<0.14
+notebook>=7.0,<8.0
