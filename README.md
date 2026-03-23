@@ -68,7 +68,6 @@ movielens_recsys/
 
 - Recall：默认使用 `content + itemcf + popularity`
 - Rerank：默认使用 `svd`，也可切换成 `lightfm`
-- 适合面试时讲“为什么工业界推荐系统通常不是单阶段”
 
 ### 2. 更完整的特征工程
 
