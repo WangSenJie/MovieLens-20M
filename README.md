@@ -40,8 +40,7 @@ movielens_recsys/
 ├── data/                            # 本地自行下载的数据，默认不提交
 ├── artifacts/                       # 本地训练生成的模型与指标，默认不提交
 ├── docs/
-│   ├── ab_test.md                   # A/B Test 思路说明
-│   └── resume_interview.md          # 简历描述与面试讲稿
+│   └── ab_test.md                   # A/B Test 思路说明
 ├── notebooks/
 │   └── experiment_report.ipynb      # 实验报告 Notebook
 ├── static/                          # 前端展示页
